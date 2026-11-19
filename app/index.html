@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-text">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; Unofficial fan guide</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="subtitle">All 55 official trophies — 1 platinum, 2 gold, 6 silver, 46 bronze, 28 of them hidden on PlayStation until earned — each with its official name, description and grade, a guide in our own words with its sources, a roadmap to the platinum, and a tracker that saves your progress in this browser.</p>
+  </div>
+  <div class="progress-card" id="progressCard" aria-label="Overall progress">
+    <div class="big-count"><span id="earnedCount">0</span><span class="of">/ 55</span></div>
+    <p class="progress-label">trophies earned</p>
+    <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progressBarWrap"><div class="progress-fill" id="progressFill"></div></div>
+    <p class="grade-counts" id="gradeCounts"></p>
+    <p class="next-up" id="nextUp"></p>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Sections">
+  <button type="button" class="tab active" data-view="guide" id="tabGuide">Guide &amp; tracker</button>
+  <button type="button" class="tab" data-view="roadmap" id="tabRoadmap">Roadmap to platinum</button>
+  <button type="button" class="tab" data-view="missables" id="tabMissables">Missables <span class="tab-badge" id="missableCount"></span></button>
+</nav>
+
+<main>
+  <section id="view-guide" class="view active">
+    <div class="toolbar">
+      <label class="search">Search <input id="search" type="search" placeholder="Trophy name or description…" autocomplete="off"></label>
+      <div class="chips" id="kindChips" role="group" aria-label="Filter by kind">
+        <button type="button" class="chip active" data-kind="all">All</button>
+        <button type="button" class="chip" data-kind="story">Story</button>
+        <button type="button" class="chip" data-kind="missable">Missable</button>
+        <button type="button" class="chip" data-kind="collectibles">Collectibles</button>
+        <button type="button" class="chip" data-kind="activities">Activities</button>
+        <button type="button" class="chip" data-kind="online">Online</button>
+      </div>
+      <label class="grade-filter">Grade
+        <select id="gradeFilter">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="spoiler-toggle"><input id="spoilerToggle" type="checkbox"> Hide story spoilers</label>
+      <div class="io-buttons">
+        <button type="button" id="exportBtn">Export progress</button>
+        <label class="import-btn">Import progress <input id="importInput" type="file" accept="application/json,.json"></label>
+      </div>
+    </div>
+    <p class="list-meta" id="listMeta"></p>
+    <div class="guide-layout">
+      <ul class="trophy-list" id="trophyList"></ul>
+      <aside class="detail" id="detailPane" aria-live="polite"></aside>
+    </div>
+  </section>
+
+  <section id="view-roadmap" class="view">
+    <p class="section-intro">The road to <strong>“Vice Got a Price!”</strong> in six stages, built from the official descriptions: which story chapters and missions, which collectibles and counts, in what order. Play it in order — the grinds at the end fill in while you do the rest.</p>
+    <ol class="roadmap" id="roadmapList"></ol>
+  </section>
+
+  <section id="view-missables" class="view">
+    <p class="section-intro">A trophy is flagged <strong>missable</strong> here when its official description ties it to one story moment — one chapter, one named mission, one companion's final mission. Nothing else in the list is missable: activities, collectibles and open-world trophies stay available after the story. Where the game offers mission replay from the pause menu, replaying the mission is the way back; otherwise the moment only comes again on a new playthrough. No missable flag here is confirmed by Rockstar — each is a caution built from the official description.</p>
+    <ul class="trophy-list missable-list" id="missableList"></ul>
+  </section>
+</main>
+
+<footer>
+  <p><strong>Sources.</strong> Trophy names, descriptions and grades are the official PlayStation 5 list, as listed by <a href="https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/">Exophase</a> and <a href="https://psnprofiles.com/trophies/43531-grand-theft-auto-vi">PSNProfiles</a> (the two agree on every name, description and grade); PSN counts where a trophy tracks one are from PSNProfiles. Every guide is written for this entry, in its own words, from the official description — the game released 19 November 2026, so no location is claimed that the descriptions do not support.</p>
+  <p>Unofficial fan guide. Not affiliated with, endorsed by or connected to Rockstar Games or PlayStation. No Rockstar logo, artwork or game screenshot is used anywhere in this guide. Progress is saved only in this browser (localStorage) and can be exported to a file and imported back.</p>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
